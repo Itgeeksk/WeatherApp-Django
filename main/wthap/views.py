@@ -7,14 +7,9 @@ def HomeView(request):
     if request.method == "POST":    
         city = request.POST['city']
         if city == "":
-            context = {
-            "city" : " - " ,
-            "code" : " - " ,
-            "temp" : " - ",
-            "pressure" : " - ",
-        }
+            context = {}
         else:
-            url = f"https://api.openweathermap.org/data/2.5/forecast?q={city}&appid=xxxxxxxxxxxxxxxxxxxxxxx"
+            url = f"https://api.openweathermap.org/data/2.5/forecast?q={city}&appid=21c2fba050f4b6c020c53a04db856bb9"
             req = ur.urlopen(url).read()
             data = json.loads(req)
             context['city'] = city
