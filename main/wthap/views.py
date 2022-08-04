@@ -14,7 +14,7 @@ def HomeView(request):
             "pressure" : " - ",
         }
         else:
-            url = f"https://api.openweathermap.org/data/2.5/forecast?q={city}&appid=21c2fba050f4b6c020c53a04db856bb9"
+            url = f"https://api.openweathermap.org/data/2.5/forecast?q={city}&appid=xxxxxxxxxxxxxxxxxxxxxxx"
             req = ur.urlopen(url).read()
             data = json.loads(req)
             context['city'] = city
