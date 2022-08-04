@@ -36,9 +36,18 @@
   <div class="row">
     {% if code == "200" %}
     <div class="col-md-6 col-md-offset-3">
-      <h1>{{city}}</h1>
-        <h5>temp : {{temp}}</h5>
-        <h5>pressure : {{pressure}} </h5>
+      <h3 class="card-title">{{city}}</h3>
+          <div class="card" style="width: 90rem;">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <p> temp : {{temp}} </p>
+                <p> tempmin : {{tempmin}} </p>
+                <p> tempmax : {{tempmax}} </p>
+                <p> pressure : {{pressure}} </p>
+                <p> weather : {{weather}} - {{description}} </p>
+              </li>
+            </ul>
+          </div>
     </div>
     {% endif %}
   </div>
